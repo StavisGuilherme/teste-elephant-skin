@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+@font-face {
+  font-family: AauxProMedium;
+  src: url('./assets/fonts/aaux-proMedium-regular.ttf');
+}
+
+@font-face {
+  font-family: AauxProBold;
+  src: url('./assets/fonts/aaux-proBold-regular.ttf');
+}
+
+@font-face {
+  font-family: AauxProBlackSC;
+  src: url('./assets/fonts/aaux-proBlack-sc-regular.ttf');
+}
+
+:root {
+  font-family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, button, div{
+  margin: 0;
+  padding: 0;
+}
+
+button:hover{
+  cursor: pointer;
+}
