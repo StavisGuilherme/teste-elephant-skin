@@ -104,15 +104,6 @@ export const TextContainer = styled.div`
       margin-bottom: 32px;
     }
 
-    .guest {
-      button {
-        text-align: left;
-        color: #f6f6f6;
-        background-color: #00000020;
-        box-shadow: inset 1px 1px 5px 1px #ffffff32;
-      }
-    }
-
     .spacer {
       width: 100%;
       height: 1px;
@@ -149,13 +140,6 @@ export const TextContainer = styled.div`
       a {
         margin-top: 32px;
         width: 100%;
-
-        button {
-          text-align: center;
-          background-color: #fff;
-          color: #000;
-          width: 100%;
-        }
       }
     }
 

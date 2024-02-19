@@ -14,16 +14,23 @@ export const OuterContainer = styled.div`
   .buttons {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
     width: 32px;
 
-    .button {
-      :hover {
-        cursor: pointer;
-      }
-    }
+    .unit {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
 
-    .line {
-      height: 37px;
+      .button {
+        :hover {
+          cursor: pointer;
+        }
+      }
+
+      .line {
+        height: 37px;
+      }
     }
   }
 

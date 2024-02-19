@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { landingBackground } from "../../assets";
 
 export const OuterContainer = styled.div`
   height: 100vh;
 
   background-color: #000000;
-  background-image: url(${landingBackground});
   background-repeat: no-repeat;
   background-position: center;
 
@@ -13,6 +11,8 @@ export const OuterContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+
+  background-image: url(${(props) => props.bg});
 `;
 
 export const InnerContainer = styled.div`
@@ -67,17 +67,7 @@ export const StartText = styled.div`
       text-align: center;
       color: #fff;
       margin: 0;
-    }
-
-    .start {
-      border-radius: 1000px;
-      width: 56px;
-      height: 56px;
-      color: #fff;
-      box-shadow: inset 1px 1px 5px 1px #ffffff32;
-      box-shadow: 0 4px 4px 0 #00000025;
-      background: #00000020;
-      margin-top: 24px;
+      margin-bottom: 24px;
     }
   }
 
@@ -100,5 +90,51 @@ export const StartText = styled.div`
     text-align: center;
     color: #fff;
     margin-top: 32px;
+  }
+`;
+
+export const CarouselContainer = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  .text {
+    margin-left: 76px;
+
+    h1 {
+      font-family: "Open Sans";
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 65px;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #fff;
+    }
+
+    p {
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #fff;
+    }
+  }
+
+  .carousel {
+    width: 780px;
+    height: 632px;
+
+    .item {
+      width: 362px;
+      box-shadow: 0 4px 4px 0 #00000048;
+      border-radius: 19px;
+      background-color: red;
+      height: 532px;
+    }
   }
 `;

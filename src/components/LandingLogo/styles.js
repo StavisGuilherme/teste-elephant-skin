@@ -49,4 +49,8 @@ export const Button = styled.button`
   :hover {
     cursor: pointer;
   }
+
+  .img {
+    width: 28px;
+  }
 `;

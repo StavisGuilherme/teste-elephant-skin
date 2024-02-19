@@ -1,29 +1,22 @@
-import { logoSVG } from '../../assets'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { logoSVG, arrowRight } from "../../assets";
+import { TransparentButton } from "../UI";
 
-import * as S from './styles'
+import * as S from "./styles";
 
-const LandingLogo = ({setClicked}) => {
-    
-    return (
-        <S.OuterContainer>
-            <img src={logoSVG}/>
-            
-            <S.TextContainer>
-                <span>START EXPERIENCE</span>
+const LandingLogo = ({ setClicked }) => {
+  return (
+    <S.OuterContainer>
+      <img src={logoSVG} />
 
-                <S.Button 
-                onClick={() => setClicked(true)}
-                >
-                    <FontAwesomeIcon icon={faArrowRight} />
-                </S.Button>
+      <S.TextContainer>
+        <span>START EXPERIENCE</span>
 
-            </S.TextContainer>
-        </S.OuterContainer>
-    )
-}
+        <TransparentButton onClick={() => setClicked(true)}>
+          <img src={arrowRight} className="img" />
+        </TransparentButton>
+      </S.TextContainer>
+    </S.OuterContainer>
+  );
+};
 
-
-
-export default LandingLogo
+export default LandingLogo;
