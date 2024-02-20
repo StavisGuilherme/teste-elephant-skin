@@ -13,6 +13,33 @@ import {
   sixth,
 } from "../../assets";
 
+export const carouselText = [
+  {
+    title: "360° BUILDING",
+    paragraph: "View the building and availability",
+  },
+  {
+    title: "TOUR VIRTUAL",
+    paragraph: "Take a tour of our building",
+  },
+  {
+    title: "AMENITIES",
+    paragraph: "See each floor and it's amenities",
+  },
+  {
+    title: "SURROUNDINGS",
+    paragraph: "See what's around",
+  },
+  {
+    title: "GALLERY",
+    paragraph: "View images in high resolution",
+  },
+  {
+    title: "WATCH",
+    paragraph: "Complete videos of the project",
+  },
+];
+
 export const carouselBackgrounds = [
   {
     bg: background360,

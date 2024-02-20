@@ -13,6 +13,11 @@ export const OuterContainer = styled.div`
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 430px) {
+    background-size: 290%;
+    background-position: -100px;
+  }
 `;
 
 export const CenterContainer = styled.div`
@@ -20,4 +25,8 @@ export const CenterContainer = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 430px) {
+    width: 100%;
+  }
 `;

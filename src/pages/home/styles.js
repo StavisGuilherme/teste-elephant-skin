@@ -13,6 +13,22 @@ export const OuterContainer = styled.div`
   align-items: center;
 
   background-image: url(${(props) => props.bg});
+
+  @media (max-width: 430px) {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .showButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 99;
+
+    @media (min-width: 431px) {
+      display: none;
+    }
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -23,73 +39,22 @@ export const InnerContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: 430px) {
+    width: 100%;
+  }
+
   span {
     align-self: flex-end;
     margin-right: 32px;
-  }
-`;
 
-export const StartText = styled.div`
-  @keyframes animate {
-    from {
-      margin-left: 130vw;
+    @media (max-height: 720px) {
+      margin-bottom: 16px;
     }
-    to {
-      margin-left: 0;
+
+    @media (max-width: 430px) {
+      align-self: center;
+      margin-left: 40px;
     }
-  }
-
-  margin-left: 130vw;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 597px;
-
-  animation: animate 1.5s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-
-  .startButton {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 204px;
-
-    .text {
-      font-family: "Open Sans";
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 33px;
-      letter-spacing: 0px;
-      text-align: center;
-      color: #fff;
-      margin: 0;
-      margin-bottom: 24px;
-    }
-  }
-
-  h1 {
-    font-family: "Open Sans";
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 65px;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: #fff;
-  }
-
-  h2 {
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33px;
-    letter-spacing: 0.01em;
-    text-align: center;
-    color: #fff;
-    margin-top: 32px;
   }
 `;
 
@@ -101,8 +66,20 @@ export const CarouselContainer = styled.div`
 
   width: 100%;
 
+  @media (max-width: 430px) {
+    flex-flow: column nowrap;
+    height: 600px;
+  }
+
   .text {
     margin-left: 76px;
+
+    @media (max-width: 430px) {
+      margin: 0 0 16px 0;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
 
     h1 {
       font-family: "Open Sans";
@@ -112,6 +89,11 @@ export const CarouselContainer = styled.div`
       letter-spacing: 0.5px;
       text-align: left;
       color: #fff;
+
+      @media (max-width: 430px) {
+        font-size: 38px;
+        text-align: center;
+      }
     }
 
     p {
@@ -122,19 +104,25 @@ export const CarouselContainer = styled.div`
       letter-spacing: 0px;
       text-align: left;
       color: #fff;
+
+      @media (max-width: 430px) {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 0 8px 0;
+      }
     }
   }
 
-  .carousel {
-    width: 780px;
+  .carousel,
+  .carousel-slider {
     height: 632px;
 
-    .item {
-      width: 362px;
-      box-shadow: 0 4px 4px 0 #00000048;
-      border-radius: 19px;
-      background-color: red;
-      height: 532px;
+    @media (max-height: 720px) {
+      height: 100%;
+    }
+
+    @media (max-width: 430px) {
+      height: 100%;
     }
   }
 `;

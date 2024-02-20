@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const OuterContainer = styled.div`
   width: 780px;
   height: 632px;
+
+  @media (max-height: 720px) {
+    height: 500px;
+  }
 `;
 
 export const CarouselItem = styled.div`
@@ -22,6 +26,11 @@ export const CarouselItem = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media (max-width: 430px) {
+    width: 250px;
+    margin: 0 0 0 69px;
+  }
 
   .customLegend {
     color: #fff;

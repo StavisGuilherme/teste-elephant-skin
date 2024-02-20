@@ -1,35 +1,55 @@
 import * as S from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-import { SideBar, Header, LandingFooter, MyCarousel } from "../../components";
-import { TransparentButton, LargeButton } from "../../components/UI";
+import {
+  SideBar,
+  Header,
+  LandingFooter,
+  MyCarousel,
+  HomeText,
+} from "../../components";
+import { LargeButton, TransparentButton } from "../../components/UI";
 
-import { landingBackground, arrowRight } from "../../assets";
+import { landingBackground } from "../../assets";
 
-import { carouselBackgrounds } from "./helpers";
+import { carouselBackgrounds, carouselText } from "./helpers";
+
+import { CarouselContext } from "../../contexts";
 
 const Home = () => {
   const [clicked, setClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(0);
+  const [showSideMenu, setShowSideMenu] = useState(false);
+  const [carouselState, setCarouselState] = useState(0);
 
   return (
     <S.OuterContainer
       clicked={clicked}
       bg={clicked ? carouselBackgrounds[clickedIndex].bg : landingBackground}
     >
-      <>
-        <SideBar />
+      <div className="showButton">
+        <TransparentButton onClick={() => setShowSideMenu(!showSideMenu)}>
+          {showSideMenu ? (
+            <FontAwesomeIcon icon={faArrowLeft} />
+          ) : (
+            <FontAwesomeIcon icon={faArrowRight} />
+          )}
+        </TransparentButton>
+      </div>
+      <SideBar showSideMenu={showSideMenu} />
 
-        <S.InnerContainer>
-          <Header />
+      <S.InnerContainer>
+        <Header />
 
-          {clicked ? (
+        {clicked ? (
+          <CarouselContext.Provider value={carouselState}>
             <S.CarouselContainer>
               <div className="text">
-                <h1>360° BUILDING</h1>
-                <p>View the building and availability</p>
+                <h1>{carouselText[carouselState].title}</h1>
+                <p>{carouselText[carouselState].paragraph}</p>
                 <LargeButton width={"206px"} height={"48px"}>
                   LET ME IN <FontAwesomeIcon icon={faArrowRight} />
                 </LargeButton>
@@ -38,28 +58,16 @@ const Home = () => {
               <MyCarousel
                 carouselBackgrounds={carouselBackgrounds}
                 setClickedIndex={setClickedIndex}
+                setCarouselState={setCarouselState}
               />
             </S.CarouselContainer>
-          ) : (
-            <S.StartText>
-              <h1>INNOVATION IN YOUR HANDS</h1>
-              <h2>
-                Explore, Interact and Transform the Real Estate Market with Our
-                Smart Interactive Table.
-              </h2>
+          </CarouselContext.Provider>
+        ) : (
+          <HomeText setClicked={setClicked} />
+        )}
 
-              <div className="startButton">
-                <span className="text">START EXPERIENCE</span>
-                <TransparentButton onClick={() => setClicked(true)}>
-                  <img src={arrowRight} className="img" />
-                </TransparentButton>
-              </div>
-            </S.StartText>
-          )}
-
-          <LandingFooter />
-        </S.InnerContainer>
-      </>
+        <LandingFooter />
+      </S.InnerContainer>
     </S.OuterContainer>
   );
 };

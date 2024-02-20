@@ -44,3 +44,7 @@ h1, h2, h3, button, div{
 button:hover{
   cursor: pointer;
 }
+
+.carousel-root, .carousel-slider {
+  height: 100% !important;
+}

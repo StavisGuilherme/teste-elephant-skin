@@ -10,6 +10,15 @@ export const OuterContainer = styled.div`
     }
   }
 
+  @keyframes mobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   animation: animate 2s;
 
   background-color: #00000085;
@@ -21,6 +30,20 @@ export const OuterContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+
+  @media (max-height: 720px) and (max-width: 1366px) {
+    height: 450px;
+    width: 920px;
+    padding: 36px;
+  }
+
+  @media (max-width: 720px) {
+    width: 100%;
+    padding: 24px 0;
+    border-radius: 0;
+
+    animation: mobile 2s;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -34,6 +57,24 @@ export const ImageContainer = styled.div`
     top: 466px;
     left: 133px;
   }
+
+  @media (max-height: 720px) {
+    width: 360px;
+
+    img {
+      width: 360px;
+    }
+
+    .logo {
+      top: 296px;
+      left: 50px;
+      width: 260px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -41,6 +82,11 @@ export const TextContainer = styled.div`
 
   display: flex;
   flex-flow: column nowrap;
+
+  @media (max-width: 430px) {
+    width: 430px;
+    align-items: center;
+  }
 
   .content {
     height: 104px;
@@ -50,6 +96,16 @@ export const TextContainer = styled.div`
     color: #fff;
     margin-bottom: 48px;
 
+    @media (max-height: 720px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 430px) {
+      width: 430px;
+      align-items: center;
+      height: 80px;
+    }
+
     h1 {
       font-family: "Open Sans";
       font-size: 32px;
@@ -57,6 +113,15 @@ export const TextContainer = styled.div`
       line-height: 44px;
       letter-spacing: 0.03em;
       text-align: left;
+
+      @media (max-height: 720px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 430px) {
+        font-size: 22px;
+        text-align: center;
+      }
     }
 
     h2 {
@@ -66,6 +131,15 @@ export const TextContainer = styled.div`
       line-height: 22px;
       letter-spacing: 0em;
       text-align: left;
+
+      @media (max-height: 720px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 430px) {
+        font-size: 14px;
+        text-align: center;
+      }
     }
   }
 
@@ -76,6 +150,11 @@ export const TextContainer = styled.div`
     justify-content: space-between;
     align-items: flex-start;
 
+    @media (max-width: 430px) {
+      width: 400px;
+      padding: 0 30px;
+    }
+
     button {
       font-family: AauxProBold;
       font-size: 14px;
@@ -84,6 +163,16 @@ export const TextContainer = styled.div`
       letter-spacing: 0.04em;
       padding: 15px 25px;
       border-radius: 1000px;
+
+      @media (max-height: 720px) {
+        font-size: 12px;
+        padding: 10px 20px;
+        height: 34px;
+      }
+
+      @media (max-width: 430px) {
+        padding: 0 10px;
+      }
     }
 
     h3 {
@@ -102,6 +191,10 @@ export const TextContainer = styled.div`
       padding-bottom: 1px;
       width: 134px;
       margin-bottom: 32px;
+
+      @media (max-height: 720px) {
+        margin-bottom: 20px;
+      }
     }
 
     .spacer {
@@ -109,6 +202,10 @@ export const TextContainer = styled.div`
       height: 1px;
       background: linear-gradient(to right, #fff, #000);
       margin: 32px 0;
+
+      @media (max-height: 720px) {
+        margin: 20px 0;
+      }
     }
 
     .broker {
@@ -121,10 +218,18 @@ export const TextContainer = styled.div`
         padding: 16px;
         background-color: #00000020;
         border: none;
-        margin-bottom: 16px;
         color: white;
         outline: none;
         box-shadow: inset 1px 1px 5px 1px #ffffff32;
+        margin-bottom: 16px;
+
+        @media (max-height: 720px) {
+          margin-bottom: 12px;
+          padding: 12px;
+        }
+
+        @media (max-width: 430px) {
+        }
 
         ::placeholder {
           font-family: "Open Sans";
@@ -140,12 +245,20 @@ export const TextContainer = styled.div`
       a {
         margin-top: 32px;
         width: 100%;
+
+        @media (max-height: 720px) {
+          margin-top: 16px;
+        }
       }
     }
 
     .create {
       width: 100%;
       margin-top: 32px;
+
+      @media (max-height: 720px) {
+        margin-top: 16px;
+      }
 
       span {
         font-family: "Open Sans";
@@ -158,6 +271,14 @@ export const TextContainer = styled.div`
 
         a {
           color: #ffe08f;
+
+          @media (max-height: 720px) {
+            margin-top: 0;
+          }
+
+          .loginButton {
+            height: 100px;
+          }
         }
       }
     }

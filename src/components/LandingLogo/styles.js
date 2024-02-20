@@ -4,9 +4,26 @@ export const OuterContainer = styled.div`
   @keyframes appearFromRight {
     from {
       margin-left: 130vw;
+
+      @media (max-width: 430px) {
+        margin-top: 150vh;
+      }
     }
     to {
       margin-left: 0;
+
+      @media (max-width: 430px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @keyframes mobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 
@@ -17,6 +34,19 @@ export const OuterContainer = styled.div`
   animation: appearFromRight 1.5s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
+
+  @media (max-width: 430px) {
+    width: 100%;
+    opacity: 0;
+    margin-left: 0;
+    animation: mobile 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+    .logo {
+      width: 100%;
+    }
+  }
 `;
 
 export const TextContainer = styled.div`

@@ -12,10 +12,11 @@ import {
 } from "../../assets";
 import { Link } from "react-router-dom";
 
-const SideBar = () => {
+const SideBar = ({ showSideMenu }) => {
   const icons = [first, second, third, fourth, fifth, sixth];
+
   return (
-    <S.OuterContainer>
+    <S.OuterContainer display={showSideMenu ? "flex" : "none"}>
       <div></div>
       <div className="buttons">
         {icons.map((icon, index) => {

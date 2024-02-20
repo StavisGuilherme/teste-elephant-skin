@@ -9,7 +9,12 @@ import { Link } from "react-router-dom";
 
 import { TransparentButton, LargeButton } from "../UI";
 
+import { useState } from "react";
+
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <S.OuterContainer>
       <S.ImageContainer>
@@ -43,14 +48,26 @@ const Login = () => {
             <h3>I&#39;M A BROKER</h3>
             <div className="border" />
 
-            <input type="text" name="email" placeholder="Type your e-mail" />
             <input
               type="text"
+              name="email"
+              placeholder="Type your e-mail"
+              onChange={(event) => setEmail(event.target.value)}
+            />
+            <input
+              type="password"
               name="password"
               placeholder="Type your password"
+              onChange={(event) => setPassword(event.target.value)}
             />
             <Link to={`home`}>
-              <LargeButton width={"100%"}>
+              <LargeButton
+                width={"100%"}
+                onClick={() =>
+                  console.log("email: ", email, "\n", "password: ", password)
+                }
+                className="loginButton"
+              >
                 Login <FontAwesomeIcon icon={faArrowRight} />
               </LargeButton>
             </Link>
