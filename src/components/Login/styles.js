@@ -31,8 +31,8 @@ export const OuterContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  @media (max-height: 720px) and (max-width: 1366px) {
-    height: 450px;
+  @media (max-height: 768px) and (max-width: 1366px) {
+    height: 470px;
     width: 920px;
     padding: 36px;
   }
@@ -58,7 +58,7 @@ export const ImageContainer = styled.div`
     left: 133px;
   }
 
-  @media (max-height: 720px) {
+  @media (max-height: 768px) {
     width: 360px;
 
     img {
@@ -96,7 +96,7 @@ export const TextContainer = styled.div`
     color: #fff;
     margin-bottom: 48px;
 
-    @media (max-height: 720px) {
+    @media (max-height: 768px) {
       margin-bottom: 20px;
     }
 
@@ -114,7 +114,7 @@ export const TextContainer = styled.div`
       letter-spacing: 0.03em;
       text-align: left;
 
-      @media (max-height: 720px) {
+      @media (max-height: 768px) {
         font-size: 24px;
       }
 
@@ -132,7 +132,7 @@ export const TextContainer = styled.div`
       letter-spacing: 0em;
       text-align: left;
 
-      @media (max-height: 720px) {
+      @media (max-height: 768px) {
         font-size: 14px;
       }
 
@@ -164,7 +164,7 @@ export const TextContainer = styled.div`
       padding: 15px 25px;
       border-radius: 1000px;
 
-      @media (max-height: 720px) {
+      @media (max-height: 768px) {
         font-size: 12px;
         padding: 10px 20px;
         height: 34px;
@@ -192,7 +192,7 @@ export const TextContainer = styled.div`
       width: 134px;
       margin-bottom: 32px;
 
-      @media (max-height: 720px) {
+      @media (max-height: 768px) {
         margin-bottom: 20px;
       }
     }
@@ -203,7 +203,7 @@ export const TextContainer = styled.div`
       background: linear-gradient(to right, #fff, #000);
       margin: 32px 0;
 
-      @media (max-height: 720px) {
+      @media (max-height: 768px) {
         margin: 20px 0;
       }
     }
@@ -246,8 +246,8 @@ export const TextContainer = styled.div`
         margin-top: 32px;
         width: 100%;
 
-        @media (max-height: 720px) {
-          margin-top: 16px;
+        @media (max-height: 768px) {
+          margin-top: 0;
         }
       }
     }
@@ -256,7 +256,7 @@ export const TextContainer = styled.div`
       width: 100%;
       margin-top: 32px;
 
-      @media (max-height: 720px) {
+      @media (max-height: 768px) {
         margin-top: 16px;
       }
 
@@ -272,7 +272,7 @@ export const TextContainer = styled.div`
         a {
           color: #ffe08f;
 
-          @media (max-height: 720px) {
+          @media (max-height: 768px) {
             margin-top: 0;
           }
 

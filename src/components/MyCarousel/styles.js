@@ -4,8 +4,8 @@ export const OuterContainer = styled.div`
   width: 780px;
   height: 632px;
 
-  @media (max-height: 720px) {
-    height: 500px;
+  @media (max-height: 768px) {
+    height: 525px;
   }
 `;
 

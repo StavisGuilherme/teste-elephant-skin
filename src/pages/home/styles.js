@@ -47,7 +47,7 @@ export const InnerContainer = styled.div`
     align-self: flex-end;
     margin-right: 32px;
 
-    @media (max-height: 720px) {
+    @media (max-height: 768px) {
       margin-bottom: 16px;
     }
 
@@ -117,7 +117,7 @@ export const CarouselContainer = styled.div`
   .carousel-slider {
     height: 632px;
 
-    @media (max-height: 720px) {
+    @media (max-height: 768px) {
       height: 100%;
     }
 

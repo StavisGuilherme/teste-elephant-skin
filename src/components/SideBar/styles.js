@@ -60,7 +60,7 @@ export const OuterContainer = styled.div`
       .line {
         height: 37px;
 
-        @media (max-height: 720px) {
+        @media (max-height: 768px) {
           height: 20px;
         }
       }

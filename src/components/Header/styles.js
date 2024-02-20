@@ -11,7 +11,7 @@ export const OuterContainer = styled.div`
 
   border-bottom: 2px solid #ffffff32;
 
-  @media (max-height: 720px) {
+  @media (max-height: 768px) {
     height: 64px;
   }
 
@@ -33,7 +33,7 @@ export const OuterContainer = styled.div`
       border-bottom: 1px solid #fff;
       padding-bottom: 27px;
 
-      @media (max-height: 720px) {
+      @media (max-height: 768px) {
         padding-bottom: 10px;
       }
 

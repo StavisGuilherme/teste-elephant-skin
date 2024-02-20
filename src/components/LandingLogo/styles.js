@@ -3,18 +3,10 @@ import styled from "styled-components";
 export const OuterContainer = styled.div`
   @keyframes appearFromRight {
     from {
-      margin-left: 130vw;
-
-      @media (max-width: 430px) {
-        margin-top: 150vh;
-      }
+      margin-left: 150vw;
     }
     to {
       margin-left: 0;
-
-      @media (max-width: 430px) {
-        margin-top: 0;
-      }
     }
   }
 
@@ -27,13 +19,14 @@ export const OuterContainer = styled.div`
     }
   }
 
-  margin-left: 130vw;
+  margin-left: 150vw;
   display: flex;
   flex-flow: column nowrap;
   max-width: 484px;
   animation: appearFromRight 1.5s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
+  overflow: hidden;
 
   @media (max-width: 430px) {
     width: 100%;

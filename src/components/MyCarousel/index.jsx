@@ -12,7 +12,8 @@ const MyCarousel = ({
   setClickedIndex,
   setCarouselState,
 }) => {
-  const isMobile = window.innerWidth <= 430;
+  const isMobile = screen.width <= 430;
+  console.log(screen.width);
   return (
     <S.OuterContainer>
       <Carousel
@@ -71,7 +72,7 @@ const MyCarousel = ({
 export default MyCarousel;
 
 const renderItem = (item, options) => {
-  const windowWidth = window.innerWidth;
+  const windowWidth = screen.width;
 
   const getHeight = (winWidth, isSelected) => {
     let resReturn = "";

@@ -45,7 +45,7 @@ export const OuterContainer = styled.div`
 
     margin-top: 204px;
 
-    @media (max-height: 720px) {
+    @media (max-height: 768px) {
       margin-top: 78px;
     }
 
@@ -75,7 +75,7 @@ export const OuterContainer = styled.div`
     text-align: center;
     color: #fff;
 
-    @media (max-height: 720px) {
+    @media (max-height: 768px) {
       font-size: 32px;
     }
   }
@@ -90,7 +90,7 @@ export const OuterContainer = styled.div`
     color: #fff;
     margin-top: 32px;
 
-    @media (max-height: 720px) {
+    @media (max-height: 768px) {
       font-size: 18px;
       margin-top: 26px;
     }
